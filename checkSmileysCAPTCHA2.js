@@ -101,8 +101,8 @@ function getCodeFromDict(smileyNum, srcImg){
     for (var i = 0; i < dictList.length; ++i){
         // load dict image
         addLog("load dictionary ("+i+" - "+dictList[i]+")...");
-        var img = document.getElementById("dict_"+(i+1));
-        //var img = document.getElementById("remoteDict_"+(i+1));
+        //var img = document.getElementById("dict_"+(i+1)); // CORS bypass when dev testing
+        var img = document.getElementById("remoteDict_"+(i+1));
         if (null == img)
             return addLog("error loading dictionary image ("+i+")...");
         //img.crossOrigin = ''; // not working for CORS
